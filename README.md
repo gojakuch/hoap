@@ -1,3 +1,5 @@
+![logo](https://github.com/gojakuch/hoap/blob/main/logo.png)
+
 # Hoap - Use Pointers from Python or Hy
 Hoap is a module that gives you access to pointers and advanced memory management in Python.
 
@@ -22,6 +24,13 @@ while True:
   h = hoap.alloc("A long long long long long long string")
 ```
 2) Hoppers, on C[ython] level, may point not to a single HopUnit, but to an array of those. Such a structure should be named LowColl (or low-level collection) and is fully supported bu Hoap module.
+
+## How to install
+On Linux, just go to downloaded `hoap` directory and run:
+```
+$ sudo python3 setup.py install
+```
+On Windows, generally, you should do the same thing.
 
 ## Functions and keywords
 Here are signatures and descriptions of the functions Hoap provides for working with memory:
