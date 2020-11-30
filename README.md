@@ -9,7 +9,7 @@ Hoap (Heap Object Allocator and Processor) allows a Hy or Python programmer (a h
 When working in Python or Hy, we only work with Python Objects (PyObjects), so how can we access pointers? Easily, if they are wrapped in Python extension types. Hopper is a class that is used to work with pointers in Hoap:
 ```python
 import hoap
-h = Hopper() # this will create an empty Hopper that equals Nullhop
+h = hoap.Hopper() # this will create an empty Hopper that equals to Nullhop
 ```
 Hoppers, however, cannot point directly to PyObjects, as Python allocates PyObjects dynamically and, in most cases, they are not changed throughout their lives (most of Python's types are immutable). For this reason, a Hopper always points to a C structure that is not accessible from Python code directly. The structure itself points to a PyObject and may change its location and value when needed. Such structures are named HopUnits. This architecture of Hoap Memory System allows us to create pointer-like structures that may point to the same exact value forever from Python code.
 ```python
@@ -79,8 +79,8 @@ self.__str__()
 ```
 #### Methods and properties:
 ```python
-self.is_null()                      # tells whether self points to Nullhop or not
-self.is_lowcoll()                   # checks whether a Hopper is a low-level collection or not
+self.is_null() -> None or 1         # tells whether self points to Nullhop or not
+self.is_lowcoll() -> None or 1      # checks whether a Hopper is a low-level collection or not
 self.val                            # a property that CAN be modified; dereferences a Hopper is same as self.__getitem__(0)
 self.unit_adress                    # a property that returns an integer adress of what a Hopper points to
 ```
