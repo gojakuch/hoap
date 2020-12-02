@@ -23,14 +23,14 @@ Important points:
 while True:
   h = hoap.alloc("A long long long long long long string")
 ```
-2) Hoppers, on C[ython] level, may point not to a single HopUnit, but to an array of those. Such a structure should be named LowColl (or low-level collection) and is fully supported bu Hoap module.
+2) Hoppers, on C[ython] level, may point not to a single HopUnit, but to an array of those. Such a structure would be called LowColl (or low-level collection) and is fully supported by Hoap.
 
 ## How to install
 On Linux, just go to downloaded `hoap` directory and run:
 ```
 $ sudo python3 setup.py install
 ```
-On Windows, generally, you should do the same thing.
+On Windows, generally, you should do the same thing (but without `sudo`).
 
 ## Functions and keywords
 Here are signatures and descriptions of the functions Hoap provides for working with memory:
@@ -113,3 +113,4 @@ print(h0==h1) # -> None
 
 
 by Atell Krasnopolski
+
